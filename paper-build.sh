@@ -32,6 +32,7 @@ for patch in ../Spigot-Server-Patches/*.patch; do
     echo "[Paper->Spigot-Server] applying $base_name.patch"
     git apply --whitespace=nowarn $patch
 done
+sed -i 's/<version>1\.2\.3<\/version> <!-- paper - bump log4j -->/<version>1.2.4<\/version> <!-- paper - bump log4j -->/' pom.xml
 
 cd ../
 
